@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "275515258098",
+    "firebase_url": "https://media-4e717.firebaseio.com",
+    "project_id": "media-4e717",
+    "storage_bucket": "media-4e717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275515258098:android:6cb2ecc181027ae859cc6b",
+        "android_client_info": {
+          "package_name": "live.qubbe.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275515258098-f2do3cjpk0rahp7ta81l0jd5b515qqal.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "live.qubbe.android",
+            "certificate_hash": "15ec6ff22e940893b7193dd3c83387287732a92b"
+          }
+        },
+        {
+          "client_id": "275515258098-cdar0nd71547k6n6mt64bhlb91smvhvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "live.qubbe.android",
+            "certificate_hash": "409269850d26a666d5a60685d0084cb1fd012bf5"
+          }
+        },
+        {
+          "client_id": "275515258098-pkdgmc6m1pu623om6e62he2ka12rtgr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAybhg8xLWtJ1qpN9os3fYyn-2VgJ4keZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275515258098-pkdgmc6m1pu623om6e62he2ka12rtgr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275515258098:android:630b43f4787fcff459cc6b",
+        "android_client_info": {
+          "package_name": "tv.paddi.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275515258098-35att8aed0s2dlim86jo3l3sr9k63nqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tv.paddi.android",
+            "certificate_hash": "d6230252e70a1fdd5c9524e2eca537b52de4f849"
+          }
+        },
+        {
+          "client_id": "275515258098-pa76h03k5ghms9n4umckojbvd7qmhoe9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tv.paddi.android",
+            "certificate_hash": "409269850d26a666d5a60685d0084cb1fd012bf5"
+          }
+        },
+        {
+          "client_id": "275515258098-pkdgmc6m1pu623om6e62he2ka12rtgr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAybhg8xLWtJ1qpN9os3fYyn-2VgJ4keZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275515258098-pkdgmc6m1pu623om6e62he2ka12rtgr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

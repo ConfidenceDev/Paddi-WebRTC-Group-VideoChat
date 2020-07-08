@@ -1,0 +1,275 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/remoteLin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridView
+            android:id="@+id/grdRemote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_1"
+            android:nestedScrollingEnabled="false"
+            android:numColumns="2"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/svLocalView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <view
+            android:id="@+id/svLocalView"
+            class="io.skyway.Peer.Browser.Canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/coverLin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coverTopCon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/appIcon"
+                android:layout_width="@dimen/display_40dp"
+                android:layout_height="@dimen/display_40dp"
+                android:layout_marginStart="@dimen/display_8dp"
+                android:layout_marginTop="@dimen/display_8dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/settingsBtn"
+                android:layout_width="@dimen/display_40dp"
+                android:layout_height="@dimen/display_40dp"
+                android:layout_marginTop="@dimen/display_8dp"
+                android:layout_marginEnd="@dimen/display_8dp"
+                android:contentDescription="@string/settings"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/display_2dp"
+                android:src="@mipmap/sett"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/onlineLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/display_30dp"
+                android:layout_marginStart="@dimen/display_60dp"
+                android:layout_marginEnd="@dimen/display_60dp"
+                android:orientation="vertical"
+                android:padding="@dimen/display_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/onlineTopLin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/display_32dp"
+                        android:layout_height="@dimen/display_32dp"
+                        android:layout_marginEnd="@dimen/display_8dp"
+                        android:contentDescription="@string/tv"
+                        android:src="@mipmap/tv" />
+
+                    <TextView
+                        android:id="@+id/onlineCountHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/display_2dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/display_4dp"
+                        android:text="@string/online"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/display_24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/onlineCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/display_12dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/display_22sp"/>
+
+                <Button
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/display_44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/display_12dp"
+                    android:background="@drawable/bg_passive"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/display_24dp"
+                    android:paddingTop="@dimen/display_4dp"
+                    android:paddingEnd="@dimen/display_24dp"
+                    android:paddingBottom="@dimen/display_4dp"
+                    android:text="@string/passive"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/display_18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/display_1dp"
+                    android:background="@color/trans_white"
+                    android:layout_marginTop="@dimen/display_16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/display_12dp"
+                    android:weightSum="1"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/roomNameField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:background="@drawable/edit_box_white"
+                        android:textSize="@dimen/display_20sp"
+                        android:padding="@dimen/display_8dp"
+                        android:textColor="@color/white"
+                        android:hint="@string/private_room"
+                        android:textColorHint="@color/trans_white"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:gravity="start"
+                        android:layout_marginEnd="@dimen/display_8dp"
+                        android:layout_marginTop="@dimen/display_1dp"
+                        android:textCursorDrawable="@drawable/bg_cursor"/>
+
+                    <Button
+                        android:id="@+id/createRoomBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/display_44dp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".7"
+                        android:background="@drawable/rounded_btn_shade1"
+                        android:gravity="center"
+                        android:text="@string/join"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/display_18sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/joinRoomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/display_44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/display_12dp"
+                    android:background="@drawable/rounded_btn_white"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/display_4dp"
+                    android:paddingBottom="@dimen/display_4dp"
+                    android:text="@string/random"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_dark_text"
+                    android:textSize="@dimen/display_20sp" />
+
+            </LinearLayout>
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/peerPulse"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pulse_color="@color/trans_grey200"
+                app:pulse_count="2"
+                app:pulse_duration="3000"
+                app:pulse_interpolator="Linear"
+                app:pulse_repeat="0"
+                app:pulse_startFromScratch="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coverBottomCon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/swapBtn"
+                android:layout_width="@dimen/display_40dp"
+                android:layout_height="@dimen/display_40dp"
+                android:layout_marginStart="@dimen/display_8dp"
+                android:layout_marginBottom="@dimen/display_8dp"
+                android:alpha=".8"
+                android:contentDescription="@string/start"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/display_2dp"
+                android:src="@mipmap/swap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/leaveBtn"
+                android:layout_width="@dimen/display_40dp"
+                android:layout_height="@dimen/display_40dp"
+                android:layout_marginEnd="@dimen/display_8dp"
+                android:layout_marginBottom="@dimen/display_8dp"
+                android:alpha=".8"
+                android:contentDescription="@string/next"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/display_2dp"
+                android:src="@mipmap/right_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

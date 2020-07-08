@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settingsBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/display_4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settingsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverLay"
+            app:titleTextAppearance="?android:attr/textAppearanceLarge"
+            app:titleTextColor="@color/primary_dark_text">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/settingsBack"
+                    android:layout_width="@dimen/display_38dp"
+                    android:layout_height="@dimen/display_38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/display_8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@mipmap/ic_close_black"
+                    android:contentDescription="@string/close_page"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/display_20sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/display_16dp"
+                android:layout_marginTop="@dimen/display_8dp"
+                android:layout_marginEnd="@dimen/display_16dp"
+                app:cardCornerRadius="@dimen/display_4dp"
+                app:cardElevation="@dimen/display_2dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/aboutBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginTop="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/about"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/aboutBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/inviteBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/tell_a_friend"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/inviteBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/shareBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/share_app"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/shareBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/rateBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/rate_app"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/rateBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--<androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/facebookBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/visit_page"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/facebookBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/feedbackBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/send_us_a_feedback"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/feedbackBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/licenseBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/license"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/licenseBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/terms_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:text="@string/terms_amp_policy"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/display_1dp"
+                                android:layout_marginTop="@dimen/display_14dp"
+                                android:background="@color/grey200"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/terms_btn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/con9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:padding="@dimen/display_8dp">
+
+                            <TextView
+                                android:id="@+id/helpBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/display_8dp"
+                                android:layout_marginEnd="@dimen/display_8dp"
+                                android:layout_marginBottom="@dimen/display_12dp"
+                                android:text="@string/help"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/display_18sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settingsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/display_16dp"
+                android:layout_marginTop="@dimen/display_8dp"
+                android:layout_marginEnd="@dimen/display_16dp"
+                android:layout_marginBottom="@dimen/display_8dp"
+                app:cardCornerRadius="@dimen/display_4dp"
+                app:cardElevation="@dimen/display_2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/display_16dp">
+
+                    <TextView
+                        android:id="@+id/signOutBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="start"
+                        android:text="@string/sign_out"
+                        android:textColor="@color/primary_dark_text"
+                        android:textSize="@dimen/display_18sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/display_1dp"
+                        android:layout_marginTop="@dimen/display_14dp"
+                        android:layout_marginBottom="@dimen/display_8dp"
+                        android:background="@color/grey200" />
+
+                    <TextView
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="start"
+                        android:text="@string/delete_account"
+                        android:textColor="@color/primary_dark_text"
+                        android:textSize="@dimen/display_18sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <io.skyway.Peer.Browser.Canvas
+        android:id="@+id/cvsRemote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+<!--    app:layout_constraintDimensionRatio="H, 3: 5.6"-->
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="@dimen/display_34dp"
+        android:layout_height="@dimen/display_34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/display_8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@mipmap/flag"
+        android:enabled="false"
+        android:contentDescription="@string/flag_as_inappropriate"
+        android:layout_marginTop="@dimen/display_2dp"
+        android:layout_alignParentEnd="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
