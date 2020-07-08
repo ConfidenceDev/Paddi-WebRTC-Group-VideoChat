@@ -9,9 +9,6 @@
 <img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/1.png" width="148">
 <img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/2.png" width="148">
 <img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/3.png" width="148">
-<img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/4.png" width="148">
-<img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/5.png width="148">
-<img src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/6.png" width="148">
 </p>
 
 # How to Use
@@ -20,7 +17,7 @@
 * Clone or download source zip file
 * Paystack payment platform was used but you can use any payment gateway you like
 * If Paystack obtain public test key and Add to manifest
-* Create an acount, add a domain name and obtain api key here: <a href="https://webrtc.ecl.ntt.com/"><b>https://webrtc.ecl.ntt.com/<b/></a>
+* Create an acount, add a domain name and obtain api key here: <a href="https://webrtc.ecl.ntt.com/">**https://webrtc.ecl.ntt.com/**</a>
 * Add Skyway Api key and Domain name in "MainActivity"
 * Run app
 
