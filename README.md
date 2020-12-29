@@ -22,7 +22,7 @@
 * Run app
 
 # Download App
-<a href="https://play.google.com/store/apps/details?id=live.paddi.android">
+<a href="https://play.google.com/store/apps/details?id=me.vebbo.android">
 <img border="0" alt="AppLink" src="https://github.com/Dev-Geek/Paddi-WebRTC-Group-VideoChat/blob/master/screenshots/play_btn.png" width="240" target="_blank">
 </a>
  
