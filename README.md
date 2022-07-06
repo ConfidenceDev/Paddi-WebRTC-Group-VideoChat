@@ -30,6 +30,6 @@
 # Contact
 For inquires, support, bug reports and suggestions send me a mail@: confidostic3@gmail.com
 
-* Facebook: Onisofien Eze
-* Twitter: @OnisofienGeek
-* Instagram: @onisofien.dev
+* Facebook: Confidence Eze
+* Twitter: @ConfidenceDev
+* Instagram: @confidence.dev
